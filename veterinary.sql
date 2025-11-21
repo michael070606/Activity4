@@ -23,7 +23,6 @@ CREATE TABLE invoices (
     paymenttime TIME
 );
 
-<<<<<<< HEAD
 INSERT INTO appointments (appointmentid, animalid, doctorid, appointmentdate, reason) VALUES
 (1, 1, 1, '2025-12-01', 'Vaccination'),
 (2, 2, 2, '2025-12-02', 'Checkup'),
@@ -92,7 +91,11 @@ UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Sofia';
 
+SELECT DISTINCT species
+FROM animals;
+
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
+
 
 
