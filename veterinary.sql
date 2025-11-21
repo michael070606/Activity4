@@ -87,3 +87,16 @@ VALUES
 (5, 'Dr.Luis', 'Torres', 'Surgery Specialist', '123-555-7777', 'luis@example.com'),
 (6, 'Dr.Carmen', 'Fernandez', 'Opthalmology Specialist', '333-222-1111', 'carmen@example.com');
 
+INSERT INTO doctors (doctorid, dfirstname, dlastname, speciality) VALUES
+(1, 'John', 'Doe', 'Surgery'),
+(2, 'Jane', 'Smith', 'Dentistry'),
+(3, 'Alice', 'Johnson', 'Dermatology'),
+(4, 'Bob', 'Brown', 'Cardiology'),
+(5, 'Charlie', 'Davis', 'General Practice'),
+(6, 'Diana', 'Evans', 'Ophthalmology'),
+(7, 'Frank', 'Green', 'Neurology'),
+(8, 'Grace', 'Hall', 'Radiology'),
+(9, 'Henry', 'King', 'Oncology'),
+(10, 'Ivy', 'Lee', 'Anesthesiology');
+
+
