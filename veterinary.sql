@@ -78,6 +78,20 @@ INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color,
 (9, 'Bella', 'Dog', 'Poodle', '2017-06-06', 'Female', 'White', 9),
 (10, 'Oscar', 'Cat', 'Persian', '2020-08-08', 'Male', 'White/Gray', 10);
 
+
+INSERT INTO invoices(invoiceid, appointid, totalamount, paymentdate)
+VALUES
+(1, 1, 50.00, '09:30:00'),
+(2, 2, 75.00, '14:15:00'),
+(3, 3, 100.00, '11:00:00'),
+(4, 4, 200.00, '13:45:00'),
+(5, 5, 80.00, '10:30:00'),
+(6, 6, 30.00, '15:00:00'),
+(7, 7, 75.00, '09:15:00'),
+(8, 8, 150.00, '16:30:00'),
+(9, 9, 60.00, '14:45:00'),
+(10, 10, 40.00, '11:30:00');
+
 INSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
 VALUES
 (1, 'Dr.Maria', 'Santos', 'General Veterinarian', '987-654-3210', 'maria@example.com'),
@@ -99,5 +113,6 @@ VALUES
     (8, 8, '2023-04-18 00:00:00', 5, 'Spaying', 'N/A', 'Successfully performed spaying surgery'),
     (9, 9, '2023-05-02 00:00:00', 4, 'Allergic reaction', 'Antihistamines', 'Allergic reaction due to food prescribed antihistamine'),
     (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
+
 
 
