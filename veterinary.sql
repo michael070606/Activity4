@@ -25,3 +25,7 @@ CREATE TABLE invoices (
 
 DELETE FROM appointments
 WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba');
+
+SELECT DISTINCT species
+FROM animals;
+
