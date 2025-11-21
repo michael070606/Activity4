@@ -6,6 +6,7 @@ CREATE TABLE owners(
     address VARCHAR(100),
     phone VARCHAR(15),
     email VARCHAR(100)
+    registereddate DATE
 );
 
 
