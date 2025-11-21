@@ -53,6 +53,19 @@ CREATE TABLE medicalrecords (
     FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
 
+INSERT INTO appointments (appointmentid, animalid, doctorid, appointmentdate, reason) VALUES
+(1, 1, 1, '2025-12-01', 'Vaccination'),
+(2, 2, 2, '2025-12-02', 'Checkup'),
+(3, 3, 1, '2025-12-03', 'Surgery follow-up'),
+(4, 4, 3, '2025-12-04', 'Dental cleaning'),
+(5, 5, 2, '2025-12-05', 'Annual checkup'),
+(6, 6, 3, '2025-12-06', 'Vaccination'),
+(7, 7, 1, '2025-12-07', 'Skin treatment'),
+(8, 8, 2, '2025-12-08', 'Nail trimming'),
+(9, 9, 3, '2025-12-09', 'Checkup'),
+(10, 10, 1, '2025-12-10', 'Weight management');
+
+
 INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid) VALUES
 (1, 'Buddy', 'Dog', 'Labrador', '2018-05-10', 'Male', 'Yellow', 1),
 (2, 'Mittens', 'Cat', 'Siamese', '2019-03-22', 'Female', 'Cream', 2),
@@ -65,6 +78,7 @@ INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color,
 (9, 'Bella', 'Dog', 'Poodle', '2017-06-06', 'Female', 'White', 9),
 (10, 'Oscar', 'Cat', 'Persian', '2020-08-08', 'Male', 'White/Gray', 10);
 
+
 INSERT INTO doctors (doctorid, dfirstname, dlastname, speciality) VALUES
 (1, 'John', 'Doe', 'Surgery'),
 (2, 'Jane', 'Smith', 'Dentistry'),
@@ -76,3 +90,4 @@ INSERT INTO doctors (doctorid, dfirstname, dlastname, speciality) VALUES
 (8, 'Grace', 'Hall', 'Radiology'),
 (9, 'Henry', 'King', 'Oncology'),
 (10, 'Ivy', 'Lee', 'Anesthesiology');
+
