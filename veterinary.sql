@@ -92,3 +92,7 @@ UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Sofia';
 
+SELECT SUM(totalamount) AS total_sales
+FROM invoices;
+
+
