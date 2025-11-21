@@ -97,5 +97,12 @@ FROM animals;
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
 
+SELECT an.name
+FROM animals an
+JOIN appointments a ON an.animalid = a.animalid
+GROUP BY an.name
+ORDER BY COUNT(a.appointid) DESC
+LIMIT 1;
+
 
 
