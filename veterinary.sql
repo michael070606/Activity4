@@ -22,3 +22,6 @@ CREATE TABLE invoices (
     totalamount DECIMAL(10,2),
     paymenttime TIME
 );
+
+DELETE FROM appointments
+WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba');
