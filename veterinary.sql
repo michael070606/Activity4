@@ -64,3 +64,15 @@ INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color,
 (8, 'Coco', 'Parrot', 'Macaw', '2015-12-25', 'Female', 'Blue/Red', 8),
 (9, 'Bella', 'Dog', 'Poodle', '2017-06-06', 'Female', 'White', 9),
 (10, 'Oscar', 'Cat', 'Persian', '2020-08-08', 'Male', 'White/Gray', 10);
+
+INSERT INTO doctors (doctorid, dfirstname, dlastname, speciality) VALUES
+(1, 'John', 'Doe', 'Surgery'),
+(2, 'Jane', 'Smith', 'Dentistry'),
+(3, 'Alice', 'Johnson', 'Dermatology'),
+(4, 'Bob', 'Brown', 'Cardiology'),
+(5, 'Charlie', 'Davis', 'General Practice'),
+(6, 'Diana', 'Evans', 'Ophthalmology'),
+(7, 'Frank', 'Green', 'Neurology'),
+(8, 'Grace', 'Hall', 'Radiology'),
+(9, 'Henry', 'King', 'Oncology'),
+(10, 'Ivy', 'Lee', 'Anesthesiology');
