@@ -15,6 +15,24 @@ CREATE TABLE appointments (
     reason VARCHAR(255),
     FOREIGN KEY (animalid) REFERENCES animals(animalid)
 );
+CREATE TABLE doctors (
+    doctorid INT PRIMARY KEY,
+    name VARCHAR(50),
+    specialty VARCHAR(50),
+    phone VARCHAR(20),
+    email VARCHAR(50)
+);
+
+CREATE TABLE medicalrecords (
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    doctorid INT,
+    diagnosis VARCHAR(255),
+    treatment VARCHAR(255),
+    recorddate DATE,
+    FOREIGN KEY (animalid) REFERENCES animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES doctors(doctogit add veterinary.sqlrid)
+);
 
 CREATE TABLE invoices (
     invoiceid INT PRIMARY KEY,
