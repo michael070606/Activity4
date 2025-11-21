@@ -53,6 +53,19 @@ CREATE TABLE medicalrecords (
     FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
 
+INSERT INTO appointments (appointmentid, animalid, doctorid, appointmentdate, reason) VALUES
+(1, 1, 1, '2025-12-01', 'Vaccination'),
+(2, 2, 2, '2025-12-02', 'Checkup'),
+(3, 3, 1, '2025-12-03', 'Surgery follow-up'),
+(4, 4, 3, '2025-12-04', 'Dental cleaning'),
+(5, 5, 2, '2025-12-05', 'Annual checkup'),
+(6, 6, 3, '2025-12-06', 'Vaccination'),
+(7, 7, 1, '2025-12-07', 'Skin treatment'),
+(8, 8, 2, '2025-12-08', 'Nail trimming'),
+(9, 9, 3, '2025-12-09', 'Checkup'),
+(10, 10, 1, '2025-12-10', 'Weight management');
+
+
 INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid) VALUES
 (1, 'Buddy', 'Dog', 'Labrador', '2018-05-10', 'Male', 'Yellow', 1),
 (2, 'Mittens', 'Cat', 'Siamese', '2019-03-22', 'Female', 'Cream', 2),
@@ -65,14 +78,12 @@ INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color,
 (9, 'Bella', 'Dog', 'Poodle', '2017-06-06', 'Female', 'White', 9),
 (10, 'Oscar', 'Cat', 'Persian', '2020-08-08', 'Male', 'White/Gray', 10);
 
-INSERT INTO doctors (doctorid, dfirstname, dlastname, speciality) VALUES
-(1, 'John', 'Doe', 'Surgery'),
-(2, 'Jane', 'Smith', 'Dentistry'),
-(3, 'Alice', 'Johnson', 'Dermatology'),
-(4, 'Bob', 'Brown', 'Cardiology'),
-(5, 'Charlie', 'Davis', 'General Practice'),
-(6, 'Diana', 'Evans', 'Ophthalmology'),
-(7, 'Frank', 'Green', 'Neurology'),
-(8, 'Grace', 'Hall', 'Radiology'),
-(9, 'Henry', 'King', 'Oncology'),
-(10, 'Ivy', 'Lee', 'Anesthesiology');
+INSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
+VALUES
+(1, 'Dr.Maria', 'Santos', 'General Veterinarian', '987-654-3210', 'maria@example.com'),
+(2, 'Dr.Antonio', 'Gonzales', 'Feline Specialist', '555-123-4567', 'antonio@example.com'),
+(3, 'Dr.Felipe', 'Luna', 'Orthopedic Specialist', '111-222-3333', 'felipe@example.com'),
+(4, 'Dr.Sofia', 'Reyes', 'Dermatology Specialist', '999-888-7777', 'sofia@xample.com'),
+(5, 'Dr.Luis', 'Torres', 'Surgery Specialist', '123-555-7777', 'luis@example.com'),
+(6, 'Dr.Carmen', 'Fernandez', 'Opthalmology Specialist', '333-222-1111', 'carmen@example.com');
+
