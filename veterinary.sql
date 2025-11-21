@@ -87,12 +87,11 @@ VALUES
 DELETE FROM appointments
 WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba');
 
-
-SELECT DISTINCT species
-FROM animals;
-
 UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Sofia';
+
+SELECT DISTINCT species
+FROM animals;
 
 
