@@ -28,3 +28,15 @@ CREATE TABLE animals (
     FOREIGN KEY (ownerid)
         REFERENCES owners(ownerid)
 );
+
+INSERT INTO owners (ownerid, name, contact, address) VALUES
+(1, 'John Doe', '123-456-7890', '123 Elm St'),
+(2, 'Jane Smith', '234-567-8901', '456 Oak St'),
+(3, 'Alice Johnson', '345-678-9012', '789 Pine St'),
+(4, 'Bob Brown', '456-789-0123', '321 Maple St'),
+(5, 'Charlie Davis', '567-890-1234', '654 Cedar St'),
+(6, 'Diana Evans', '678-901-2345', '987 Birch St'),
+(7, 'Frank Green', '789-012-3456', '159 Walnut St'),
+(8, 'Grace Hall', '890-123-4567', '753 Spruce St'),
+(9, 'Henry King', '901-234-5678', '852 Chestnut St'),
+(10, 'Ivy Lee', '012-345-6789', '951 Poplar St');
