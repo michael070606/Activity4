@@ -1,4 +1,3 @@
-
 CREATE TABLE owners(
     ownerid INT PRIMARY KEY,
     ofirstname VARCHAR(50),
@@ -15,44 +14,16 @@ CREATE TABLE appointments (
     appointmentdate DATE,
     reason VARCHAR(255),
     FOREIGN KEY (animalid) REFERENCES animals(animalid)
-
-CREATE TABLE animals (
-    animalid INT PRIMARY KEY,
-    name VARCHAR(50),
-    species VARCHAR(50),
-    breed VARCHAR(50),
-    dateofbirth DATE,
-    gender VARCHAR(10),
-    color VARCHAR(50),
-    ownerid INT,
-    FOREIGN KEY (ownerid)
-        REFERENCES owners(ownerid)
 );
 
-
-INSERT INTO owners (ownerid, name, contact, address) VALUES
-(1, 'John Doe', '123-456-7890', '123 Elm St'),
-(2, 'Jane Smith', '234-567-8901', '456 Oak St'),
-(3, 'Alice Johnson', '345-678-9012', '789 Pine St'),
-(4, 'Bob Brown', '456-789-0123', '321 Maple St'),
-(5, 'Charlie Davis', '567-890-1234', '654 Cedar St'),
-(6, 'Diana Evans', '678-901-2345', '987 Birch St'),
-(7, 'Frank Green', '789-012-3456', '159 Walnut St'),
-(8, 'Grace Hall', '890-123-4567', '753 Spruce St'),
-(9, 'Henry King', '901-234-5678', '852 Chestnut St'),
-(10, 'Ivy Lee', '012-345-6789', '951 Poplar St');
-
-CREATE TABLE medicalrecords (
-    recordid INT PRIMARY KEY,
-    animalid INT,
-    doctorid INT,
-    diagnosis VARCHAR(255),
-    treatment VARCHAR(255),
-    recorddate DATE,
-    FOREIGN KEY (animalid) REFERENCES animals(animalid),
-    FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
+CREATE TABLE invoices (
+    invoiceid INT PRIMARY KEY,
+    appointid INT,
+    totalamount DECIMAL(10,2),
+    paymenttime TIME
 );
 
+<<<<<<< HEAD
 INSERT INTO appointments (appointmentid, animalid, doctorid, appointmentdate, reason) VALUES
 (1, 1, 1, '2025-12-01', 'Vaccination'),
 (2, 2, 2, '2025-12-02', 'Checkup'),
@@ -114,9 +85,10 @@ VALUES
     (9, 9, '2023-05-02 00:00:00', 4, 'Allergic reaction', 'Antihistamines', 'Allergic reaction due to food prescribed antihistamine'),
     (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
+DELETE FROM appointments
+WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba');
+
 UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Sofia';
-
-
 
