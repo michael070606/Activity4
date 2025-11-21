@@ -94,6 +94,13 @@ WHERE dfirstname = 'Sofia';
 SELECT DISTINCT species
 FROM animals;
 
+
+SELECT COUNT(*) AS total_appointments
+FROM appointments a
+JOIN animals an ON a.animalid = an.animalid
+JOIN owners o ON an.ownerid = o.ownerid
+WHERE o.name = 'Maria';
+
 SELECT SUM(totalamount) AS total_sales
 FROM invoices;
 
@@ -103,6 +110,7 @@ JOIN appointments a ON an.animalid = a.animalid
 GROUP BY an.name
 ORDER BY COUNT(a.appointid) DESC
 LIMIT 1;
+
 
 
 
